@@ -1,0 +1,125 @@
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+
+  "defaultProfile": "{72a69aca-322e-465d-a799-1d64dff65269}",
+  "initialCols": 85,
+  "initialRows": 18,
+  "profiles": {
+    "defaults": {
+      // Put settings here that you want to apply to all profiles
+      "fontFace": "SF Mono",
+      "colorScheme": "Monokai Vivid"
+    },
+    "list": [
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "cmd",
+        "startingDirectory": "%USERPROFILE%",
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "startingDirectory": "%USERPROFILE%",
+
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "closeOnExit": true,
+        "commandline": "C:\\Program Files\\Git\\bin\\bash.exe --cd-to-home",
+        "cursorColor": "#ffc83d",
+        "cursorShape": "bar",
+        "fontSize": 14,
+        "historySize": 9001,
+        "name": "Git Bash",
+        "guid": "{72a69aca-322e-465d-a799-1d64dff65269}",
+        "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
+        "padding": "5, 5, 0, 0",
+        "snapOnInput": true,
+        "startingDirectory": "%USERPROFILE%"
+      }
+    ]
+  },
+
+  // Add custom color schemes to this array
+  "schemes": [
+    {
+      "name": "Temp",
+      "foreground": "#50ff05",
+      "background": "#000000",
+      "black": "#000000",
+      "blue": "#0091ff",
+      "brightBlack": "#c3c3c3",
+      "brightBlue": "#00c3ff",
+      "brightCyan": "#00ffff",
+      "brightGreen": "#50ff05",
+      "brightPurple": "#e292ff",
+      "brightRed": "#ff0000",
+      "brightWhite": "#ffffff",
+      "brightYellow": "#ffff00",
+      "cyan": "#00aeff",
+      "green": "#7bff00",
+      "purple": "#dd00ff",
+      "red": "#ff0000",
+      "yellow": "#ffe600",
+      "white": "#ffffff"
+    },
+    {
+      "name": "Monokai Vivid",
+      "black": "#121212",
+      "red": "#ff0000",
+      "green": "#50ff05",
+      "yellow": "#fff30a",
+      "blue": "#0443ff",
+      "purple": "#f800f8",
+      "cyan": "#01b6ed",
+      "white": "#ffffff",
+      "brightBlack": "#838383",
+      "brightRed": "#ff0000",
+      "brightGreen": "#50ff05",
+      "brightYellow": "#fff26d",
+      "brightBlue": "#0443ff",
+      "brightPurple": "#f200f6",
+      "brightCyan": "#51ceff",
+      "brightWhite": "#ffffff",
+      "background": "#121212",
+      "foreground": "#50ff05"
+    },
+    {
+      "name": "shades-of-purple",
+      "black": "#000000",
+      "red": "#d90429",
+      "green": "#3ad900",
+      "yellow": "#ffe700",
+      "blue": "#6943ff",
+      "purple": "#ff2c70",
+      "cyan": "#00c5c7",
+      "white": "#c7c7c7",
+      "brightBlack": "#686868",
+      "brightRed": "#f92a1c",
+      "brightGreen": "#43d426",
+      "brightYellow": "#f1d000",
+      "brightBlue": "#6871ff",
+      "brightPurple": "#ff77ff",
+      "brightCyan": "#79e8fb",
+      "brightWhite": "#ffffff",
+      "background": "#262551",
+      "foreground": "#3ad900"
+    }
+  ],
+
+  // Add any keybinding overrides to this array.
+  // To unbind a default keybinding, set the command to "unbound"
+  "keybindings": []
+}

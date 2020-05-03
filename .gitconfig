@@ -1,0 +1,6 @@
+[core]
+	editor = nano
+	safecrlf = false
+[user]
+	name = debopamgupta
+	email = debopamgupta3000@gmail.com
