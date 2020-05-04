@@ -22,7 +22,8 @@
 - **FontSize ShortCuts**
 - **NPM intellisense**
 - **Prettier**
-- **Quokka.js**
+- **Quokka.js**  
+- **LiveShare**
 
 #### :pencil2: Font
 
