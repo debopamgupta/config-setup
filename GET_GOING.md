@@ -110,4 +110,5 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **OBS Studio** Record Screen, Stream etc. Get it here:- https://obsproject.com/
 - **Python** Just in case Get it:- https://www.python.org/
 - **Figma** Wireframing and prototyping. Use in the browser https://www.figma.com/ or download the Desktop Client: https://www.figma.com/downloads/
-- **Firefox Developer Edition** I do not use it much but... hey?
+- **Firefox Developer Edition** I do not use it much but... hey?   
+- **ROBO 3T** For mongo dbs
