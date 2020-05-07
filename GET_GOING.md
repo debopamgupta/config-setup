@@ -102,6 +102,8 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **Discord** Get it:- https://discordapp.com/download
 - **UELI** app launcher Get it:- https://ueli.app/#/
 - **Sumatra PDF** for pdfs Get it:- https://www.sumatrapdfreader.org/download-free-pdf-viewer.html
+                 ***OR*** 
+- **Lector** for pdfs ; Get it:- https://sagargurtu.github.io/lector/
 - **Dashlane** Password manager Get it:- https://www.dashlane.com/
 - **7 Zip** File Compresser Get it here:- https://www.7-zip.org/
 - **Everything** Both installer and command line interface (Required by UELI). Get it:- https://www.voidtools.com/downloads/
