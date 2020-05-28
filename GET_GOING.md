@@ -9,7 +9,8 @@
 **Seti Black** ,  
 **Night Owl** ,  
 **Material Icon theme** ,  
-**Just Black**
+**Just Black**  
+**Shades of Purple**
 
 #### ➕ Extensions
 
@@ -24,6 +25,8 @@
 - **Prettier**
 - **Quokka.js**  
 - **LiveShare**
+- **Vue snippets (sarah.drasner)**   
+- **Vetur**
 
 #### :pencil2: Font
 
@@ -84,13 +87,12 @@ Get it from the Github repo or the Microsoft Store.
 #### Extensions for Chrome
 
 - Adblock Plus
-- Stylus with Github Dark theme
+- Stylus
 - JSON Formatter
 - DashLane
 - React DevTools
 - Tabliss
 - Vue DevTools
-- Dark reader
 
 ## :coffee: **JDK** Java Development Kit
 
@@ -104,7 +106,6 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **Sumatra PDF** for pdfs Get it:- https://www.sumatrapdfreader.org/download-free-pdf-viewer.html
                  ***OR*** 
 - **Lector** for pdfs ; Get it:- https://sagargurtu.github.io/lector/
-- **Dashlane** Password manager Get it:- https://www.dashlane.com/
 - **7 Zip** File Compresser Get it here:- https://www.7-zip.org/
 - **Everything** Both installer and command line interface (Required by UELI). Get it:- https://www.voidtools.com/downloads/
 - **OBS Studio** Record Screen, Stream etc. Get it here:- https://obsproject.com/
