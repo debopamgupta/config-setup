@@ -3,13 +3,15 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #Bindings
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
 shopt -s autocd
 shopt -s no_empty_cmd_completion # TAB even on an empty prompt No More 'Display all GAZILLION possibilities...'
 #Colors
 export CLICOLOR=1
-export LSCOLORS='cxfxexdxbxegedabagacad'
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
-
+export LANG="en_US.UTF-8"
 export HISTSIZE=100000                          # big big history (default is 500)
 export HISTFILESIZE=$HISTSIZE                   # big big history
 type shopt &> /dev/null && shopt -s histappend  # append to history, don't overwrite it
@@ -33,16 +35,16 @@ set convert-meta off
 mkcd() {
   mkdir $1 && cd $1
 }
-echo Using Node:$(node -v) and npm:$(npm -v)
-# Optional EMOJI (USE if your terminal supports it ! )
- emojis=("🌈" "🚀" "🎉" "🌱" "🔥" "🌍"  "🐳" "✌ " "🎊" "😎" "💩")
-#  EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
-# usage `$EMOJI`
-
+gacp() {
+  gaa && gcm  $1 && gpush
+}
+# # Optional EMOJI (USE if your terminal supports it ! )
+ emojis=("🌈" "🚀" "🐳")
+ EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
+# # usage `$EMOJI`
 export PS1='\[\033]0;Bash \007\]'
-# export PS1='$EMOJI \[\e[01;31m\]DG \[\e[01;35m\]\w\[\e[01;33m\] `echo $(__git_ps1 "[%s]")` \n\[\e[01;32m\]> '
-export PS1='${emojis[$RANDOM % ${#emojis[@]} ]} \[\e[01;31m\]DG \[\e[01;35m\]\w\[\e[01;33m\] `echo $(__git_ps1 "[%s]")` \n${emojis[$RANDOM % ${#emojis[@]} ]}\[\e[01;32m\]> '
-export PS2='Continue the command >'
+export PS1='⌚ \[\e[01;33m\]\A \[\e[01;36m\]in 📂 \w\[\e[01;35m\] `echo $(__git_ps1 "on 🌵 %s")` \n\[\e[01;32m\]$EMOJI> '
+export PS2='Continue >'
 
 #Python alias
 alias python='winpty python.exe'
@@ -52,6 +54,8 @@ alias size="du -hcs ."
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337 --w --css style.css"
 alias c='code'
 alias ls='ls --color '
+alias ll='ls -l'
+alias la='ls -A'
 alias open='explorer' # for windows explorer
 alias sl='ls'
 alias lls='ls'
@@ -67,4 +71,3 @@ alias gpush='git push'
 alias gs='git status'
 alias gss='git status -s'
 alias grv='git remote -v'
- 
