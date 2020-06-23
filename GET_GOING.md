@@ -136,7 +136,7 @@ Set the **Path** variable for Java, Visual Studio Code, etc
     "sideBar.border": "#b6b6b672",
     "activityBar.border": "#b6b6b672",
     "sideBar.foreground": "#fff",
-    // "statusBar.foreground": "#fff",
+    "gitDecoration.ignoredResourceForeground": "#7e7e7e",
     "tab.activeBorder": "#b27aff"
   },
   "editor.suggestSelection": "first",
