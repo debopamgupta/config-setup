@@ -16,17 +16,21 @@
 
 - **Bracket Pair Colorizer 2**
 - **Gitlens**
+- **ESLint**
+- **Better Comments aaron-bond.better-comments**
+- **Live Server** and **Live Sass Compiler** by Ritwick Dey
 - **Language Support for Java(TM) by Red Hat**
 - **Markdown Preview Enhanced**
-- **Prettier Code Formatter** (Esben Petersen)
+- **Prettier Code Formatter esbenp.prettier-vscode**
 - **Debugger for Chrome**
 - **FontSize ShortCuts**
 - **NPM intellisense**
+- **Simple React Snippets (burkeholland.simple-react-snippets)**
 - **Prettier**
 - **Quokka.js**  
 - **LiveShare**
-- **Vue snippets (sarah.drasner)**   
-- **Vetur**
+- **Vue snippets sdras.vue-vscode-snippets**   
+- **Vetur octref.vetur**
 
 #### :pencil2: Font
 
@@ -113,3 +117,129 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **Figma** Wireframing and prototyping. Use in the browser https://www.figma.com/ or download the Desktop Client: https://www.figma.com/downloads/
 - **Firefox Developer Edition** I do not use it much but... hey?   
 - **ROBO 3T** For mongo dbs
+
+
+## Settings.json
+
+```json
+{
+  "workbench.startupEditor": "none",
+  "update.enableWindowsBackgroundUpdates": false,
+  "editor.formatOnPaste": true,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "editor.tabSize": 2,
+  "workbench.settings.openDefaultKeybindings": true,
+  "editor.fontFamily": "Operator Mono",
+  "editor.lineHeight": 0,
+  "explorer.decorations.badges": false,
+  "workbench.colorCustomizations": {
+    "sideBar.border": "#b6b6b672",
+    "activityBar.border": "#b6b6b672",
+    "sideBar.foreground": "#fff",
+    // "statusBar.foreground": "#fff",
+    "tab.activeBorder": "#b27aff"
+  },
+  "editor.suggestSelection": "first",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "editor.minimap.enabled": false,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascri  ptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.autoDetectHighContrast": false,
+  "extensions.ignoreRecommendations": true,
+  "workbench.tree.indent": 10,
+  "editor.suggest.maxVisibleSuggestions": 10,
+  "debug.console.fontSize": 17,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.minimap.renderCharacters": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "editor.formatOnSave": true,
+  "terminal.integrated.cursorStyle": "line",
+  "window.newWindowDimensions": "maximized",
+  "editor.suggestFontSize": 18,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.rendererType": "auto",
+  "editor.find.addExtraSpaceOnTop": false,
+  "markdown.preview.lineHeight": 1,
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "update.showReleaseNotes": false,
+  "telemetry.enableTelemetry": false,
+  "files.autoSaveDelay": 0,
+  "explorer.incrementalNaming": "smart",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100,
+  "java.home": "C:\\Program Files\\Java\\jdk-11.0.5",
+  "fontshortcuts.step": 0.1,
+  "fontshortcuts.defaultTerminalFontSize": 20,
+  "fontshortcuts.defaultFontSize": 20,
+  "editor.renderLineHighlight": "gutter",
+  "editor.fontSize": 20,
+  "files.autoSave": "onFocusChange",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.renderWhitespace": "none",
+  "liveshare.presence": true,
+  "java.semanticHighlighting.enabled": true,
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.fontFamily": "Inconsolata-g for Powerline",
+  "java.refactor.renameFromFileExplorer": "autoApply",
+  "window.zoomLevel": -0.6,
+  "editor.fontWeight": "400",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 4242,
+  "workbench.colorTheme": "Just Black",
+  "editor.cursorBlinking": "smooth",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "comment.block"],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#ffa1d3b1"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator.logical",
+          "keyword.operator.arithmetic",
+          "keyword.operator.assignment",
+          "keyword.operator.bitwise"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  }
+}
+
+```
