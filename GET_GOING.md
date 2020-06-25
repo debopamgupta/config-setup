@@ -32,6 +32,8 @@
 - **Vue snippets sdras.vue-vscode-snippets**   
 - **Vetur octref.vetur**
 
+There might be some more extensions check out this [gist](https://gist.github.com/47b6902a8cb1cdebe1164378448bb784) for that. 
+
 #### :pencil2: Font
 
 I use the font `Anonymous Pro` , `Dank Mono` , `Operator Mono`
