@@ -9,6 +9,7 @@ shopt -s autocd
 shopt -s no_empty_cmd_completion # TAB even on an empty prompt No More 'Display all GAZILLION possibilities...'
 #Colors
 export CLICOLOR=1
+# export LSCOLORS='cxfxexdxbxegedabagacad'
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 export LANG="en_US.UTF-8"
@@ -24,6 +25,7 @@ shopt -s cmdhist
 # Autocorrect speeling errors in `cd`
 shopt -s cdspell;
 
+# export PROMPT_COMMAND='echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"'
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
@@ -43,8 +45,8 @@ gacp() {
  EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
 # # usage `$EMOJI`
 export PS1='\[\033]0;Bash \007\]'
-export PS1='⌚ \[\e[01;33m\]\A \[\e[01;36m\]in 📂 \w\[\e[01;35m\] `echo $(__git_ps1 "on 🌵 %s")` \n\[\e[01;32m\]$EMOJI> '
-export PS2='Continue >'
+export PS1='\[\e[01;31m\]🏡 DG\[\e[01;35m\] \w\[\e[01;36m\] `echo $(__git_ps1 "git: %s")`\[\e[01;37m\] \n🎲> '
+export PS2='+ '
 
 #Python alias
 alias python='winpty python.exe'
@@ -52,7 +54,6 @@ alias python3='winpty python.exe'
 #Aliases
 alias size="du -hcs ."
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337 --w --css style.css"
-alias c='code'
 alias ls='ls --color '
 alias ll='ls -l'
 alias la='ls -A'
@@ -71,3 +72,5 @@ alias gpush='git push'
 alias gs='git status'
 alias gss='git status -s'
 alias grv='git remote -v'
+
+cd Dev/
