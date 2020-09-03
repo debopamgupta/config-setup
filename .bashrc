@@ -41,12 +41,12 @@ gacp() {
   gaa && gcm  $1 && gpush
 }
 # # Optional EMOJI (USE if your terminal supports it ! )
- emojis=("🌈" "🚀" "🐳")
- EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
+ # emojis=("🌈" "🚀" "🐳")
+ # EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
 # # usage `$EMOJI`
 export PS1='\[\033]0;Bash \007\]'
-export PS1='\[\e[01;31m\]🏡 DG\[\e[01;35m\] \w\[\e[01;36m\] `echo $(__git_ps1 "git: %s")`\[\e[01;37m\] \n🎲> '
-export PS2='+ '
+export PS1='\[\e[01;32m\]\A \[\e[01;31m\]dg:\[\e[01;35m\] \w\[\e[00;33m\] `echo $(__git_ps1 "git:[%s]")`\[\e[01;00m\] \n> '
+export PS2='>'
 
 #Python alias
 alias python='winpty python.exe'
@@ -74,3 +74,4 @@ alias gss='git status -s'
 alias grv='git remote -v'
 
 cd Dev/
+asciiCats mini
