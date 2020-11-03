@@ -74,4 +74,4 @@ alias gss='git status -s'
 alias grv='git remote -v'
 
 cd Dev/
-asciiCats mini
+asciiCats awake
