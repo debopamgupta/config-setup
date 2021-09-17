@@ -4,35 +4,9 @@
 
 ### Visual Studio Code <\\>
 
-#### Themes
+#### Themes ➕ Extensions
 
-**Seti Black** ,  
-**Night Owl** ,  
-**Material Icon theme** ,  
-**Just Black**  
-**Shades of Purple**
-
-#### ➕ Extensions
-
-- **Bracket Pair Colorizer 2**
-- **Gitlens**
-- **ESLint**
-- **Better Comments aaron-bond.better-comments**
-- **Live Server** and **Live Sass Compiler** by Ritwick Dey
-- **Language Support for Java(TM) by Red Hat**
-- **Markdown Preview Enhanced**
-- **Prettier Code Formatter esbenp.prettier-vscode**
-- **Debugger for Chrome**
-- **FontSize ShortCuts**
-- **NPM intellisense**
-- **Simple React Snippets (burkeholland.simple-react-snippets)**
-- **Prettier**
-- **Quokka.js**  
-- **LiveShare**
-- **Vue snippets sdras.vue-vscode-snippets**   
-- **Vetur octref.vetur**
-
-There might be some more extensions check out this [gist](https://gist.github.com/47b6902a8cb1cdebe1164378448bb784) for that. 
+ check out this [gist](https://gist.github.com/47b6902a8cb1cdebe1164378448bb784) for that. 
 
 #### :pencil2: Font
 
@@ -57,9 +31,9 @@ npm_global modules access - https://docs.npmjs.com/resolving-eacces-permissions-
 **Vue CLI** - `npm install -g @vue/cli`  
 **reveal-md** - `npm i -g reveal-md` For presenting with markdown.  
 **yarn** - `npm i -g yarn` or `curl -o- -L https://yarnpkg.com/install.sh | bash`  
-**now** - Deploying with ZEIT NOW v2 `npm i -g now`
+**vercel** - Deploying with vercel `npm i -g vercel`
 
-DO `now login`
+Login to vercel
 
 - **tldr** - `npm i -g tldr` and then `tldr update` i guess to update the list -- similar thing to man pages
 
@@ -88,30 +62,28 @@ Get it from the Github repo or the Microsoft Store.
 
 ## :earth_americas: Chrome
 
-- **Theme** - **Just Black** from the Chrome webstore
-
 #### Extensions for Chrome
 
-- Adblock Plus
+- uBlock Origin
 - Stylus
-- JSON Formatter
-- DashLane
+- JSON Viewer
 - React DevTools
 - Tabliss
 - Vue DevTools
+- Twitch Auto Bonus
 
 ## :coffee: **JDK** Java Development Kit
 
-Download the latest one but I am using **JDK 11**  
+Download the latest one 
+
 Set the **Path** variable for Java, Visual Studio Code, etc
 
 ## 🎁 Other Stuff and programs (Productivity, Wireframing, Chatting etc. )
 
 - **Discord** Get it:- https://discordapp.com/download
 - **UELI** app launcher Get it:- https://ueli.app/#/
+- **WOX** app launcher Get it:- https://github.com/Wox-launcher/Wox
 - **Sumatra PDF** for pdfs Get it:- https://www.sumatrapdfreader.org/download-free-pdf-viewer.html
-                 ***OR*** 
-- **Lector** for pdfs ; Get it:- https://sagargurtu.github.io/lector/
 - **7 Zip** File Compresser Get it here:- https://www.7-zip.org/
 - **Everything** Both installer and command line interface (Required by UELI). Get it:- https://www.voidtools.com/downloads/
 - **OBS Studio** Record Screen, Stream etc. Get it here:- https://obsproject.com/
@@ -119,6 +91,15 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **Figma** Wireframing and prototyping. Use in the browser https://www.figma.com/ or download the Desktop Client: https://www.figma.com/downloads/
 - **Firefox Developer Edition** I do not use it much but... hey?   
 - **ROBO 3T** For mongo dbs
+- **Insomnia** https://insomnia.rest/
+- **Spotify**
+- **Zoom**
+- **Telegram**
+- **Snapdrop** https://snapdrop.net
+- **Notion** https://notion.so/desktop
+- **Microsoft ToDo**
+- **Microsoft Office**
+- **Microsoft Teams**
 
 
 ## Settings.json
@@ -128,19 +109,11 @@ Set the **Path** variable for Java, Visual Studio Code, etc
   "workbench.startupEditor": "none",
   "update.enableWindowsBackgroundUpdates": false,
   "editor.formatOnPaste": true,
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "editor.tabSize": 2,
-  "workbench.settings.openDefaultKeybindings": true,
-  "editor.fontFamily": "Operator Mono",
-  "editor.lineHeight": 0,
+  "editor.fontFamily": "Roboto Mono",
+  "window.dialogStyle": "custom",
   "explorer.decorations.badges": false,
-  "workbench.colorCustomizations": {
-    "sideBar.border": "#b6b6b672",
-    "activityBar.border": "#b6b6b672",
-    "sideBar.foreground": "#fff",
-    "gitDecoration.ignoredResourceForeground": "#7e7e7e",
-    "tab.activeBorder": "#b27aff"
-  },
+  "workbench.colorCustomizations": {},
   "editor.suggestSelection": "first",
   "java.configuration.checkProjectSettingsExclusions": false,
   "editor.minimap.enabled": false,
@@ -160,9 +133,6 @@ Set the **Path** variable for Java, Visual Studio Code, etc
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascri  ptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
@@ -175,17 +145,15 @@ Set the **Path** variable for Java, Visual Studio Code, etc
   "window.autoDetectHighContrast": false,
   "extensions.ignoreRecommendations": true,
   "workbench.tree.indent": 10,
-  "editor.suggest.maxVisibleSuggestions": 10,
   "debug.console.fontSize": 17,
   "editor.multiCursorModifier": "ctrlCmd",
+  // "editor.cursorSmoothCaretAnimation": true,
   "editor.minimap.renderCharacters": false,
   "workbench.tree.renderIndentGuides": "always",
   "editor.formatOnSave": true,
-  "terminal.integrated.cursorStyle": "line",
   "window.newWindowDimensions": "maximized",
   "editor.suggestFontSize": 18,
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.rendererType": "auto",
   "editor.find.addExtraSpaceOnTop": false,
   "markdown.preview.lineHeight": 1,
   "workbench.editor.enablePreview": false,
@@ -195,53 +163,109 @@ Set the **Path** variable for Java, Visual Studio Code, etc
   "telemetry.enableTelemetry": false,
   "files.autoSaveDelay": 0,
   "explorer.incrementalNaming": "smart",
-  "editor.fontLigatures": true,
-  "terminal.integrated.fontSize": 18,
+  "editor.fontLigatures": false,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
-  "java.home": "C:\\Program Files\\Java\\jdk-11.0.5",
+  "java.home": "C:\\Program Files\\Java\\jdk-16.0.1",
   "fontshortcuts.step": 0.1,
-  "fontshortcuts.defaultTerminalFontSize": 20,
+  "fontshortcuts.defaultTerminalFontSize": 18,
   "fontshortcuts.defaultFontSize": 20,
-  "editor.renderLineHighlight": "gutter",
-  "editor.fontSize": 20,
   "files.autoSave": "onFocusChange",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.renderWhitespace": "none",
-  "liveshare.presence": true,
   "java.semanticHighlighting.enabled": true,
-  "workbench.activityBar.visible": true,
-  "terminal.integrated.fontFamily": "Inconsolata-g for Powerline",
-  "java.refactor.renameFromFileExplorer": "autoApply",
-  "window.zoomLevel": -0.6,
-  "editor.fontWeight": "400",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.port": 4242,
-  "workbench.colorTheme": "Just Black",
   "editor.cursorBlinking": "smooth",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": ["comment", "comment.block"],
-        "settings": {
-          "fontStyle": "italic",
-          "foreground": "#ffa1d3b1"
-        }
-      },
-      {
-        "scope": [
-          "keyword.operator.logical",
-          "keyword.operator.arithmetic",
-          "keyword.operator.assignment",
-          "keyword.operator.bitwise"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  }
+  "editor.tokenColorCustomizations": {},
+  "editor.linkedEditing": true,
+  "editor.formatOnType": true,
+  "terminal.integrated.fontWeight": "400",
+  "editor.renderLineHighlight": "gutter",
+  "git.confirmSync": false,
+  "editor.fontWeight": "400",
+  "editor.fontSize": 18,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.settings.openDefaultKeybindings": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.cursorBlinking": true,
+  "window.title": "${folderName} ${separator} ${appName}",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "settingsSync.ignoredExtensions": ["emroussel.atomize-atom-one-dark-theme"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggest.preview": true,
+  "thunder-client.codeSnippetLanguage": "js-fetch",
+  "window.zoomLevel": -0.8,
+  "terminal.integrated.fontSize": 16,
+  "workbench.colorTheme": "Cobalt2"
 }
+
+```
+
+
+## Keybindings JSON
+
+```json
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus"
+  },
+  { "key": "ctrl+n", "command": "extension.advancedNewFile" },
+  {
+    "key": "ctrl+0",
+    "command": "-workbench.action.zoomReset"
+  },
+  {
+    "key": "ctrl+numpad_add",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "ctrl+numpad_subtract",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "ctrl+numpad_add",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "ctrl+numpad_subtract",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "ctrl+numpad0",
+    "command": "editor.action.fontZoomReset"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  }
+]
 
 ```
