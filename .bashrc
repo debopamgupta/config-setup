@@ -78,7 +78,7 @@ For evil, return justice."
 "Radioactive cats have 18 half-lives."
 "Avoid the Gates of Hell.  Use Linux"
 "I'm an idiot.. At least this one [bug] took about 5 minutes to find.."
-"A day for firm decisions!!!!!  Or is it?"
+"A day for firm decisions!  Or is it?"
 "A visit to a fresh place will bring strange work."
 "A visit to a strange place will bring fresh work."
 "Are you making all this up as you go along?"
@@ -86,7 +86,7 @@ For evil, return justice."
 "Be cautious in your daily affairs."
 "It may or may not be worthwhile, but it still has to be done."
 "It's all in the mind, ya know."
-"There is a 20% chance of tomorrow."
+"There is a 20 percent chance of tomorrow."
 "There was a phone call for you."
 "Today is the first day of the rest of your life."
 "Today is the last day of your life so far."
@@ -126,7 +126,7 @@ Parts not interchangeable with previous model."
 "A program is a lot like a nose: Sometimes it runs, and sometimes it blows."
 "yo-yo, n.
   Something that is occasionally up but normally down.
-  (see also Computer)."  
+  See also Computer."  
 )
   FORTUNE=${fortunes[$RANDOM % ${#fortunes[@]} ]}
   printf "$FORTUNE \n"
@@ -140,7 +140,7 @@ printf "$EMOJI \n"
 }
 
 
-cowsay -f tux $(fortune)
+cowsay -f tux "$(fortune)"
 # cowsay -f small $(fortune)
 # cowsay -f bunny $(fortune)
 
