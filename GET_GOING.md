@@ -49,6 +49,17 @@ Get it (CLI ) here:- https://devcenter.heroku.com/articles/heroku-cli
 
 Do `heroku login`
 
+## :ice_cream: Scoop packages  
+
+Install Scoop ( on windows ) : https://scoop.sh/
+
+### Packages to install  
+- cacert
+- cowsay
+- figlet
+- neofetch
+- wget
+
 ## :zap: Terminal
 
 Windows Terminal :- https://github.com/microsoft/terminal/releases
