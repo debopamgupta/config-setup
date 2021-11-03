@@ -22,6 +22,8 @@ type shopt &> /dev/null && shopt -s histappend  # append to history, don't overw
 
 # Don't record some commands
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
+# only shows upto this much in full path listing for PS1
+export PROMPT_DIRTRIM=2
 
 
 # export PROMPT_COMMAND='echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"'
@@ -56,11 +58,14 @@ jrun() {
 fortune() {
   fortunes=("For good, return good.
 For evil, return justice."
+"Give a small boy a hammer and he will find that everything he encounters needs pounding."
 "Good-bye.  I am leaving because I am bored."
 "If we do not change our direction we are likely to end up where we are headed."
 "If we don't survive, we don't do anything else."
 "If you are not for yourself, who will be for you?"
 "If you are for yourself, then what are you?"
+"Give your child mental blocks for Christmas."
+"Insanity is hereditary.  You get it from your kids."
 "If not now, when?"
 "If you can survive death, you can probably survive anything."
 "If you fool around with something long enough, it will eventually break."
@@ -103,30 +108,79 @@ For evil, return justice."
 "Your mode of life will be changed to ASCII."
 "Your program is sick!  Shoot it and put it out of its memory."
 "Your password is pitifully obvious."
-"Adult, n.:
-  One old enough to know better."
-"All new:
-Parts not interchangeable with previous model."
-"Allen's Axiom:
-  When all else fails, read the instructions."
-"Alone, adj.:
-  In bad company."
-"philosophy:
-    Unintelligible answers to insoluble problems."
-"QOTD:
-  The forest may be quiet, but that doesn't mean
-  the snakes have gone away."
+"Adult: One old enough to know better."
+"All new: Parts not interchangeable with previous model."
+"Allen's Axiom: When all else fails, read the instructions."
+"Alone, adj: In bad company."
+"philosophy: Unintelligible answers to insoluble problems."
+"The forest may be quiet, but that doesn't mean the snakes have gone away."
 "Some people have one of those days.  I've had one of those lives."
 "Real Time Here and now, as opposed to fake time, which only occurs there and then."
-"Recursion n.
-  See Recursion."
-"Robot, n. 
-  University administrator."
+"Recursion, See Recursion."
+"Robot, University administrator."
 "The sooner you fall behind, the more time you will have to catch up."
 "A program is a lot like a nose: Sometimes it runs, and sometimes it blows."
-"yo-yo, n.
-  Something that is occasionally up but normally down.
-  See also Computer."  
+"yo-yo, Something that is occasionally up but normally down. See also Computer."
+"All constants are variables."
+"And on the seventh day, He exited from append mode."
+"As a computer, I find your faith in technology amusing."
+"Byte your tongue."
+"C for yourself."
+"Calm down, it's *only* ones and zeroes."
+"Computers are useless.  They can only give you answers."
+"Disk crisis, please clean up!"
+"Hackers of the world, unite!"
+"MAXIMUM TERMINALS ACTIVE.  TRY AGAIN LATER"
+"Memory fault, brain fried"
+"Memory fault - where am I?"
+"New systems generate new problems."
+"New crypt.  See /usr/news/crypt."
+"No directory."
+"No extensible language will be universal."
+"Nothing happens."
+"Old mail has arrived."
+"On the eighth day, God created FORTRAN."
+"Old programmers never die, they just hit account block limit."
+"Old programmers never die, they just branch to a new address."
+"On the Internet, nobody knows you're a dog."
+"Save yourself!  Reboot in 5 seconds!"
+"Security check: INTRUDER ALERT!"
+"Swap read error.  You lose your mind."
+"Syntactic sugar causes cancer of the semicolon."
+"System checkpoint complete."
+"System going down at 1:45 this afternoon for disk crashing."
+"System going down at 5 this afternoon to install scheduler bug."
+"System going down in 5 minutes."
+"System restarting, wait..."
+"System going down in 60 seconds"
+"The disks are getting full; purge a file today."
+"The world is coming to an end ... SAVE YOUR BUFFERS!!!"
+"The world is coming to an end.  Please log off."
+"The world will end in 5 minutes.  Please log out."
+"THEGODDESSOFTHENETHASTWISTINGFINGERSANDHERVOICEISLIKEAJAVELININTHENIGHTDUDE"
+"There are no games on this system."
+"There are running jobs.  Why don't you go chase them?"
+"Type louder, please."
+"User hostile."
+"Vitamin C deficiency is apauling."
+"A black cat crossing your path signifies that the animal is going somewhere."
+"Early to rise, early to bed, makes a man healthy, wealthy and dead."
+"I'm going to live forever, or die trying!"
+"Is it weird in here, or is it just me?"
+"The best cure for insomnia is to get a  lot of sleep."
+"Time is an illusion, lunchtime doubly so."
+"Twenty Percent of Zero is Better than Nothing."
+"Why is the alphabet in that order?  Is it because of that song?"
+"Would you really want to get on a non-stop flight?"
+"Feel disillusioned?  I've got some great new illusions, right here!"
+"Good day to avoid cops.  Crawl to work."
+"If it's worth doing, it's worth doing for money."
+"If you suspect a man, don't employ him."
+"No one gets sick on Wednesdays."
+"The trouble with money is it costs too much!"
+"There are worse things in life than death.  Have you ever spent an evening
+with an insurance salesman?"
+"There's no such thing as a free lunch."
 )
   FORTUNE=${fortunes[$RANDOM % ${#fortunes[@]} ]}
   printf "$FORTUNE \n"
@@ -139,7 +193,6 @@ EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
 printf "$EMOJI \n"
 }
 
-
 cowsay -f tux "$(fortune)"
 # cowsay -f small $(fortune)
 # cowsay -f bunny $(fortune)
@@ -149,7 +202,8 @@ export PS1='\[\033]0;Bash \007\]'
 # 🡢
 # export PS1='\[\e[01;32m\]dg@pc\[\e[01;00m\]:\[\e[01;36m\]\W\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]$ '
 
-export PS1='\[\e[01;32m\]minima\[\e[01;00m\] \[\e[01;36m\]\W\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]> '
+export PS1='\[\e[01;32m\]minima\[\e[01;00m\] \[\e[01;36m\]\w\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]> '
+
 export PS2='>'
 
 #Python alias
