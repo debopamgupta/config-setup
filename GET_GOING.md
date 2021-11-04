@@ -14,6 +14,8 @@ I use the font `Anonymous Pro` , `Dank Mono` , `Operator Mono`
 
 The font files are in this repo itself
 
+Also Check out - https://gitlab.com/exorcist365/fonts
+
 ## :pancakes: MongoDB
 
 ## 💠 Node.js
@@ -112,6 +114,11 @@ Set the **Path** variable for Java, Visual Studio Code, etc
 - **Microsoft Office**
 - **Microsoft Teams**
 
+
+## Wallpapers  
+
+I am obsessed with wallpapers and therefore like a maniac, i have a wallpapers repo [here](https://github.com/debopamgupta/wallpapers)
+Also Check out others like [DT](https://gitlab.com/dwt1/wallpapers) and [Exorcist365](https://gitlab.com/exorcist365/wallpapers)
 
 ## Settings.json
 
