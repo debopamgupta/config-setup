@@ -56,16 +56,19 @@ Do `heroku login`
 Install Scoop ( on windows ) : https://scoop.sh/
 
 ### Packages to install  
+- bat
 - cacert
 - cowsay
 - figlet
 - neofetch
+- ripgrep
+- starship
 - wget
 
 ## :zap: Terminal
 
 Windows Terminal :- https://github.com/microsoft/terminal/releases
-I use Git Bash as the shell. (on windows )
+I use Git Bash as the shell and preferably, starship as the prompt. (on windows )
 Git bash comes installed with Git
 
 Get it from the Github repo or the Microsoft Store.
