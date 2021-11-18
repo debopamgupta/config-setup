@@ -23,7 +23,7 @@ type shopt &> /dev/null && shopt -s histappend  # append to history, don't overw
 # Don't record some commands
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 # only shows upto this much in full path listing for PS1
-export PROMPT_DIRTRIM=2
+# export PROMPT_DIRTRIM=2
 
 
 # export PROMPT_COMMAND='echo -ne "\033]2;$(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")\007"'
@@ -56,8 +56,7 @@ jrun() {
 }
 
 fortune() {
-  fortunes=("For good, return good.
-For evil, return justice."
+  fortunes=(
 "Give a small boy a hammer and he will find that everything he encounters needs pounding."
 "Good-bye.  I am leaving because I am bored."
 "If we do not change our direction we are likely to end up where we are headed."
@@ -78,11 +77,11 @@ For evil, return justice."
 "Although the moon is smaller than the earth, it is farther away."
 "One man's constant is another man's variable."
 "One has to look out for engineers, they begin with sewing machines and end up with the atomic bomb."
-"Quantum Mechanics is God's version of "Trust me.""
+"Quantum Mechanics is God's version of Trust me."
 "Quark!  Quark!  Beware the quantum duck!"
 "Radioactive cats have 18 half-lives."
 "Avoid the Gates of Hell.  Use Linux"
-"I'm an idiot.. At least this one [bug] took about 5 minutes to find.."
+"I'm an idiot. At least this one [bug] took about 5 minutes to find."
 "A day for firm decisions!  Or is it?"
 "A visit to a fresh place will bring strange work."
 "A visit to a strange place will bring fresh work."
@@ -153,7 +152,7 @@ For evil, return justice."
 "System going down in 5 minutes."
 "System restarting, wait..."
 "System going down in 60 seconds"
-"The disks are getting full; purge a file today."
+"The disks are getting full, purge a file today."
 "The world is coming to an end ... SAVE YOUR BUFFERS!!!"
 "The world is coming to an end.  Please log off."
 "The world will end in 5 minutes.  Please log out."
@@ -183,7 +182,7 @@ with an insurance salesman?"
 "There's no such thing as a free lunch."
 )
   FORTUNE=${fortunes[$RANDOM % ${#fortunes[@]} ]}
-  printf "$FORTUNE \n"
+  echo "$FORTUNE"
 }
 
 emoji() {
@@ -193,16 +192,19 @@ EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
 printf "$EMOJI \n"
 }
 
-cowsay -f tux "$(fortune)"
+# cowsay -f tux "$(fortune)"
+
 # cowsay -f small $(fortune)
 # cowsay -f bunny $(fortune)
+# cowsay -f vader-koala $(fortune)
 
 export PS1='\[\033]0;Bash \007\]'
 # export PS1='\[\e[01;32m\]dg@pc:\[\e[01;35m\] \W\[\e[00;33m\] `echo $(__git_ps1 "(%s)")`\[\e[01;00m\] \n$ '
 # 🡢
 # export PS1='\[\e[01;32m\]dg@pc\[\e[01;00m\]:\[\e[01;36m\]\W\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]$ '
 
-export PS1='\[\e[01;32m\]minima\[\e[01;00m\] \[\e[01;36m\]\w\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]> '
+## Current PS1 Set , before starship (via scoop on windows git bash)
+export PS1='\[\e[01;32m\]dg@pc\[\e[01;00m\] \[\e[01;36m\]\w\[\e[00;33m\] `echo $(__git_ps1 "(%s)")` \n\[\e[01;00m\]❯ '
 
 export PS2='>'
 
@@ -225,7 +227,7 @@ alias total_files='ls -l | wc -l'
 alias tldr='tldr -t ocean'
 alias mv='mv -i'
 alias rm='rm -i'
-
+alias cat='bat' # bat is a rust utility similar to the cat(1) command. install via scoop or other package manager
 
 # Git aliases
 alias ga='git add .'
@@ -242,3 +244,6 @@ alias grv='git remote -v'
 # Custom Program Aliases
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337 --w --css style.css" # reveal-md (see npm)
 alias wtsetting="subl ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" #windows terminal settings file
+
+~/blocks1
+printf "\n $(fortune) \n \n"
