@@ -55,15 +55,7 @@ Do `heroku login`
 
 Install Scoop ( on windows ) : https://scoop.sh/
 
-### Packages to install  
-- bat
-- cacert
-- cowsay
-- figlet
-- neofetch
-- ripgrep
-- starship
-- wget
+Check this gist here for list of software/utilities installed via scoop https://gist.github.com/debopamgupta/806e4931f42b42f01f1bd32741346390
 
 ## :zap: Terminal
 
