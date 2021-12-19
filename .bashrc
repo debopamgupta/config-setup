@@ -20,7 +20,8 @@ shopt -s checkwinsize # checks term size when bash regains contro
 
 #Colors
 export CLICOLOR=1
-export LSCOLORS='cxfxexdxbxegedabagacad'
+# export LSCOLORS='cxfxexdxbxegedabagacad'
+export LSCOLORS='exfxcxdxbxegedabagacad'
 
 # EXPORTS
 # export EDITOR="nano" 
@@ -60,7 +61,7 @@ jrun() {
 
 # get a random emoji. Usage - `emoji`
 emoji() {
-  emojis=("≡ƒæ╛" "≡ƒîÉ" "≡ƒÄ▓" "≡ƒîì" "≡ƒÉë" "≡ƒî╡")
+  emojis=("👾" "🌐" "🎲" "🌍" "🐉" "🌵")
   EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
   printf "$EMOJI \n"
 }
@@ -74,9 +75,21 @@ up() {
   fi
 }
 
+
 export PS1='\[\033]0;Bash \007\]'
-export PS1='\[\e[00;36m\]\[\e[01;32m\](dg@acme)\[\e[01;00m\]:\[\e[01;36m\][\w]\[\e[00;32m\]`echo $(__git_ps1 "[%s]")` \n\[\e[01;35m\]Γ¥»\[\e[01;00m\] '
+# my current 
+export PS1='\[\e[01;32m\]notdg\[\e[00;33m\]@\[\e[1;34m\]victory\[\e[01;00m\]:\[\e[01;36m\]\w\[\e[00;32m\] `echo $(__git_ps1 "(%s)")`\n\[\e[01;35m\]❯\[\e[01;00m\] '
+
+# luke smiths
+# export PS1='\[\e[1;31m\][\[\e[1;33m\]\u\[\e[1;32m\]@\[\e[1;34m\]\h \[\e[1;35m\]\w\[\e[1;31m\]]\[\e[1;00m\]\$\[\e[0;00m\] '
+
+
 export PS2='>'
+
+# zoxide - Website: https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init bash)"
+# fzf - Website: https://github.com/junegunn/fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ALIASES
 
@@ -97,13 +110,17 @@ alias la='lsd -A'
 alias sl='lsd'
 alias lls='lsd'
 
+alias historyclearall="/usr/bin/cat /dev/null > ~/.bash_history && history -c && exit"
 alias size="du -hcs ."
 alias open='explorer'
 alias man='tldr' 
 alias total_files='ls -l | wc -l'
 alias tldr='tldr -t ocean'
 
-# confirm before overwriting something
+# Reload bashrc after modifying, in the current session
+alias reload='source ~/.bashrc'
+
+# confirm before overwriting something and verbose output
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
@@ -126,14 +143,16 @@ alias gpsh='git push'
 alias gs='git status'
 alias gss='git status -s'
 alias grv='git remote -v'
-
-# zoxide - Website: https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init bash)"
-# fzf - Website: https://github.com/junegunn/fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias gittree='git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"'
 
 # Utility Aliases
+# Get your external IP
+# Public facing IP Address
 alias ipe='curl ipinfo.io/ip'
+alias myip='curl ip.appspot.com'
+
+alias weather='curl wttr.in/'
+
 
 # Custom Program Aliases
 
@@ -141,3 +160,10 @@ alias ipe='curl ipinfo.io/ip'
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337 --w --css style.css"
 # Open Settings for Windows terminal
 alias wtsetting="$EDITOR ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+
+# Starship prompt - https://starship.rs
+eval "$(starship init bash)"
+
+# Load Up Some Cool Color Blocks!!
+~/blocks1
+
