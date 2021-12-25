@@ -10,6 +10,28 @@ bind '"\e[B": history-search-forward'
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+#######
+bind '"\e[1;5D": backward-word'
+bind '"\e[1;5C": forward-word'
+bind '"\C-p":history-search-backward'
+bind '"\C-n":history-search-forward'
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"TAB":menu-complete'
+
+bind 'set show-all-if-ambiguous on'
+bind 'set bell-style none'
+bind 'set colored-stats On'
+bind 'set completion-ignore-case On'
+bind 'set completion-prefix-display-length 3'
+bind 'set mark-symlinked-directories On'
+bind 'set show-all-if-ambiguous On'
+bind 'set show-all-if-unmodified On'
+bind 'set visible-stats On'
+
+#######
+
+
 #SHOPT
 shopt -s autocd
 shopt -s no_empty_cmd_completion # TAB even on an empty prompt No More 'Display all GAZILLION possibilities...'
@@ -104,7 +126,7 @@ alias python3='winpty python.exe'
 alias ls='lsd'
 # alias ls='ls --color -F --group-directories-first' # for normal ls
 alias ls='lsd --group-dirs first'
-alias ll='lsd -lAh'
+alias ll='lsd -lAh --total-size'
 alias l='lsd -1'
 alias la='lsd -A'
 alias sl='lsd'
@@ -136,6 +158,7 @@ alias m='micro'
 alias ga='git add .'
 alias gaa='git add .'
 alias gcm='git commit -m '
+alias gc='git commit'
 alias gd='git diff'
 alias gi='git init'
 alias gpll='git pull'
@@ -165,5 +188,12 @@ alias wtsetting="$EDITOR ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wek
 eval "$(starship init bash)"
 
 # Load Up Some Cool Color Blocks!!
-~/blocks1
+# ~/blocks1
+~/fade
 
+#####################
+## CAT OUT TODOSLIST
+################
+
+/usr/bin/cat ~/workspace/temp/TODO.md
+printf "\n" 
