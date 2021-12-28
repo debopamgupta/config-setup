@@ -7,10 +7,11 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #Bindings
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+bind '"\e[C": forward-char'
+bind '"\e[D": backward-char'
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-#######
 bind '"\e[1;5D": backward-word'
 bind '"\e[1;5C": forward-word'
 bind '"\C-p":history-search-backward'
@@ -18,6 +19,8 @@ bind '"\C-n":history-search-forward'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 bind '"TAB":menu-complete'
+# Treat hyphens and underscores as equivalent
+bind "set completion-map-case on"
 
 bind 'set show-all-if-ambiguous on'
 bind 'set bell-style none'
@@ -29,16 +32,20 @@ bind 'set show-all-if-ambiguous On'
 bind 'set show-all-if-unmodified On'
 bind 'set visible-stats On'
 
-#######
-
-
 #SHOPT
-shopt -s autocd
+
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 shopt -s no_empty_cmd_completion # TAB even on an empty prompt No More 'Display all GAZILLION possibilities...'
 shopt -s cmdhist  # Save multi-line commands as one command
-shopt -s cdspell  # Autocorrect speeling errors in `cd`
 shopt -s histappend  # append to history, don't overwrite it
 shopt -s checkwinsize # checks term size when bash regains contro
+# Activate recursive globbing
+shopt -s globstar
 
 #Colors
 export CLICOLOR=1
@@ -46,6 +53,7 @@ export CLICOLOR=1
 export LSCOLORS='exfxcxdxbxegedabagacad'
 
 # EXPORTS
+
 # export EDITOR="nano" 
 export EDITOR="micro" 
 export LANG="en_US.UTF-8"
@@ -55,13 +63,50 @@ export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear" # Dont record some comman
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+# Set bat theme
+export BAT_THEME="ansi"
 
 # Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
 set input-meta on
 set output-meta on
 set convert-meta off
 
+
+# COMPLETIONS
+#
+# run `npm completions >> ~/.npm-completion.bash to generate`
+#
+source ~/.npm-completion.bash
+
 # Custom functions
+
+
+### ARCHIVE EXTRACTION
+# usage: extract <file>
+extract ()
+{
+  if [ -f "$1" ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
 # Make a directory and cd into it all at once
 mkcd() {
@@ -101,15 +146,11 @@ up() {
 export PS1='\[\033]0;Bash \007\]'
 # my current 
 export PS1='\[\e[01;32m\]notdg\[\e[00;33m\]@\[\e[1;34m\]victory\[\e[01;00m\]:\[\e[01;36m\]\w\[\e[00;32m\] `echo $(__git_ps1 "(%s)")`\n\[\e[01;35m\]❯\[\e[01;00m\] '
-
-# luke smiths
-# export PS1='\[\e[1;31m\][\[\e[1;33m\]\u\[\e[1;32m\]@\[\e[1;34m\]\h \[\e[1;35m\]\w\[\e[1;31m\]]\[\e[1;00m\]\$\[\e[0;00m\] '
-
-
 export PS2='>'
 
 # zoxide - Website: https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init bash)"
+
 # fzf - Website: https://github.com/junegunn/fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -131,6 +172,7 @@ alias l='lsd -1'
 alias la='lsd -A'
 alias sl='lsd'
 alias lls='lsd'
+alias l.='/usr/bin/ls -a | /usr/bin/grep "^\."'
 
 alias historyclearall="/usr/bin/cat /dev/null > ~/.bash_history && history -c && exit"
 alias size="du -hcs ."
@@ -138,6 +180,7 @@ alias open='explorer'
 alias man='tldr' 
 alias total_files='ls -l | wc -l'
 alias tldr='tldr -t ocean'
+alias cl="clear"
 
 # Reload bashrc after modifying, in the current session
 alias reload='source ~/.bashrc'
@@ -194,6 +237,8 @@ eval "$(starship init bash)"
 #####################
 ## CAT OUT TODOSLIST
 ################
+todo(){
+	/usr/bin/cat ~/workspace/temp/TODO.md	
+	printf "\n" 
+}
 
-/usr/bin/cat ~/workspace/temp/TODO.md
-printf "\n" 
